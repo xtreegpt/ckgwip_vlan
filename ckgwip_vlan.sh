@@ -62,19 +62,6 @@ if [ "$IP" !=  "$IP1" ];
                         del nat destination rule 35
                         del nat source rule 100
 
-                #remove old configuration
-                        del service dhcp-server
-                        del service dns forwarding
-                        del interfaces ethernet $LANVIF address
-                        del nat destination rule 10
-                        del nat destination rule 12
-                        del nat destination rule 15
-                        del nat destination rule 20
-                        del nat destination rule 25
-                        del nat destination rule 30
-                        del nat destination rule 35
-                        del nat source rule 100
-
                 #add new configuration
                         set interfaces ethernet $LANVIF address $INTERFACEIP
                         set nat destination rule 10 description 'Port Forward: VZ Tech Port 4567 to '$IP
