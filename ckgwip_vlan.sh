@@ -3,7 +3,7 @@
 WANIF=eth0.100
 LANIF=eth0.173
 LANVIF="eth0 vif 173"
-DMAC=78:67:0E:B5:5B:45
+DMAC=<your verizon router MAC address>
 
 logger -t ckgwip_vlan.sh  "Checking Gateway IP, changing if needed"
 #get gateway IP address from changeip and set it to variable IP
