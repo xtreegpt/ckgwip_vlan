@@ -6,4 +6,3 @@ scheduled tast sets this up for you.
 setup a scheduled tast for this to run. I run it once at 4am every morning. 
 set system task-scheduler task testSetGW crontab-spec '0 4 * * *'
 set system task-scheduler task testSetGW executable path '/home/vyos/ckgwip_vlan.sh'
-set system time-zone 'America/New_York'
