@@ -1,4 +1,10 @@
 #!/bin/vbash
+
+#set ID to vyattacfg for proper updates
+if [ “$(id -g -n)” != ‘vyattacfg’ ] ; then
+exec sg vyattacfg -c “/bin/vbash $(readlink -f $0) $@”
+fi
+
 #set variables for wan interface, lan interface and destination MAC address
 WANIF=eth0.100
 LANIF=eth0.173
